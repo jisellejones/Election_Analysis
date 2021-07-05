@@ -1,4 +1,4 @@
-# import csv and os
+# Add dependencies
 import csv
 import os
 
@@ -7,16 +7,38 @@ file_to_load = os.path.join("resources", "election_results.csv")
 # Assign a variable to save a file
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 
+#Adds total vote counter
+total_votes = 0
+
+#Declare a new list to hold candidates
+candidate_options = []
+
 #Open the election results and read the file.
 with open(file_to_load, "r") as election_data:
-    #read the file with reader function
     file_reader = csv.reader(election_data)
-    #Print the header row
+
+    #Read the header row
     headers = next(file_reader)
-    print(headers)
-    # Print each row in the CSV file.
-    #for row in file_reader:
-        #print(row[0])
+    
+    # Print each row in the CSV file and add total vote count
+    for row in file_reader:
+        total_votes += 1
+
+        # Print the candidate name from each row
+        candidate_name = row[2]
+
+        # Check to see if candidate name is in the lis.
+        if candidate_name not in candidate_options:
+            # Add the candidate name to the candidate list.
+            candidate_options.append(candidate_name)
+
+# Print candidate names
+print(candidate_options)
+
+# Print total number of votes
+print(total_votes)
+
+
 
 # Using the with statement open the file as a text file.
 with open(file_to_save, "w") as txt_file:
