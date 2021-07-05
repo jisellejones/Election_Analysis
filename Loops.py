@@ -5,4 +5,4 @@ while x <= 5:
 count = 7
 while count < 1:
     print("Hello World")
-    count = count - 1
+    
