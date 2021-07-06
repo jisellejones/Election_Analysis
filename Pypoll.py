@@ -41,22 +41,18 @@ with open(file_to_load, "r") as election_data:
         #Begin counting votes
         candidate_votes[candidate_name] += 1
 
-#Print the candidate vote dictionary
-print(candidate_votes)
+# Iterate through the candidate list.
+for candidate_name in candidate_votes:
 
-# Print candidate names
-print(candidate_options)
+    # Retrieve vote count of a candidate.
+    votes = candidate_votes[candidate_name]
 
-# Print total number of votes
-print(total_votes)
+    #Calculate the percentage of votes.
+    vote_percentage = float(votes) / float(total_votes) * 100
 
-
-
-# Using the with statement open the file as a text file.
-with open(file_to_save, "w") as txt_file:
-    txt_file.write("Counties in the Election\n------------------------\nArapahoe\nDenver\nJefferson")
-
-
+    #Print the candidate name and percentage of votes.
+    print(f"{candidate_name}: recieved {vote_percentage:.1f}% of votes.")
+    
 
 #1. Total number of votes cast
 #2. A complete list of candidates who received votes
