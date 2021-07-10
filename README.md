@@ -1,6 +1,6 @@
 # Election_Analysis
 
-##Project Overview
+## Project Overview
 The Colorado Board of Elections employee asked that I provide the following to complete the election audit of a recent local congressional election.
 
 1. Calculate the number of votes cast.
@@ -9,7 +9,7 @@ The Colorado Board of Elections employee asked that I provide the following to c
 4. Calculate the percentage of votes each candidate won.
 5. Determine the winner of the election based on popular vote.
 
-##Resources
+## Resources
 - Data source: election_results.csv
 - Software: Python 3.7.6, Visual Studio Code, 1.58.0
 
